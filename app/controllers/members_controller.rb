@@ -24,6 +24,7 @@ class MembersController < ApplicationController
   # POST /members
   # POST /members.json
   def create
+    # Company.find_by(name: member_params.company )
     @member = Member.new(member_params)
 
     respond_to do |format|
