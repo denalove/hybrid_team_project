@@ -26,8 +26,8 @@
   
   <div class="field">
     <%= f.label :company %><br>
-    <%= f.text_field :company %>
-  </div>
+    <%= f.text_field :company , value: (@member.company.name rescue "") %> 
+  </div> 
 
   <div class="actions">
     <%= f.submit %>

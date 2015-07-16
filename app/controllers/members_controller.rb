@@ -19,7 +19,13 @@ class MembersController < ApplicationController
 
   # GET /members/1/edit
   def edit
+    # company = Company.find_by(name: param[:member]) || Company.create(name: params[:member][:company])
+
+    # @member.company_id = company.id
+
+    
   end
+
 
   # POST /members
   # POST /members.json
@@ -28,7 +34,7 @@ class MembersController < ApplicationController
     @member = Member.new(member_params)
 
     company = Company.find_by(name: params[:member][:company]) || Company.create(name: params[:member][:company])
-    # first_or_create
+    # find_or_create_by
 
 
     @member.company_id = company.id
@@ -47,6 +53,10 @@ class MembersController < ApplicationController
   # PATCH/PUT /members/1
   # PATCH/PUT /members/1.json
   def update
+
+    company = Company.find_by(name: params[:member][:company]) || Company.create(name: params[:member][:company])
+    @member.company_id = company.id
+
     respond_to do |format|
       if @member.update(member_params)
         format.html { redirect_to @member, notice: 'Member was successfully updated.' }
@@ -62,6 +72,8 @@ class MembersController < ApplicationController
   # DELETE /members/1.json
   def destroy
     @member.destroy
+  
+
     respond_to do |format|
       format.html { redirect_to members_url, notice: 'Member was successfully destroyed.' }
       format.json { head :no_content }

@@ -2,7 +2,7 @@
 
 
 <p>
-  <strong>NAme:</strong>
+  <strong>Name:</strong>
   <%= @member.name %>
 </p>
 
@@ -17,7 +17,7 @@
 </p>
 <p>
   <strong>Company Name:</strong>
-  <%= @member.company.name %>
+  <%= @member.company.name if @member.company %>
 </p>
 
 
