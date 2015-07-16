@@ -27,6 +27,12 @@ class MembersController < ApplicationController
     # Company.find_by(name: member_params.company )
     @member = Member.new(member_params)
 
+    company = Company.find_by(name: params[:member][:company]) || Company.create(name: params[:member][:company])
+    # first_or_create
+
+
+    @member.company_id = company.id
+
     respond_to do |format|
       if @member.save
         format.html { redirect_to @member, notice: 'Member was successfully created.' }
@@ -70,6 +76,6 @@ class MembersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def member_params
-      params.require(:member).permit(:name, :title, :email)
+      params.require(:member).permit(:name, :title, :email, :photo)
     end
 end
