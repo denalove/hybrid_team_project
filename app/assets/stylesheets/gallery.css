@@ -1,7 +1,7 @@
 /***********USED FOR NEW/EDIT MEMBER STYLING*****************/
 
 
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,900|Raleway:400,800,600,200|Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,900|Raleway:400,800,600,200|Montserrat:400,700);
 
 /*-----------FONT LIST--------------
 font-family: 'Montserrat', sans-serif;
@@ -207,7 +207,7 @@ padding-top: 1vw;
   }
 }
 li.pageItems{
-  font-size: 2vw;
+  font-size: 1vw;
 }
 
 #memtit{
