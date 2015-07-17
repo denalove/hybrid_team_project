@@ -3,9 +3,9 @@
   <header class="menuBar">
     <div class="menublock">
       <ul class="navmenu">
-        <li class="menuitems"><a href="#" class="menubuttons">SEARCH</a></li>
-        <li class="menuitems"><a href="#" class="menubuttons">GALLERY</a></li>
+        <li><a href="/" id="home" class="menuitems button hvr-grow">HOME</a></li>
         <li class="menuitems"><a href="#" class="menubuttons">ABOUT US</a></li>
+        <li class="menuitems"><a href="#" class="menubuttons">COMPANIES</a></li>
       </ul>
       <!-- <div class="socialbar">
       </div> -->
@@ -13,35 +13,42 @@
   </header>
 </header>
 <div class="banner">
-  <h1>banner goes here<h1>
+  <img id="mainphoto" src="../../assets/img/1.jpg"
+  width="1300vw",
+  height=auto>
   </div>
   <div class="content">
+    <p id="filler">The LAB Miami strives to connect, educate, and empower the local community through educational and networking opportunities. We specialize in helping Miami’s leaders and organizers put together events that awe and inspire. Here are a few examples of how we like to entertain:
+Launches, Networking Events, Forums,
+Workshops, Panel Discussions, Presentations,
+Meetings, Trainings, Hack-a-thons, Art installations,
+and more…</p>
 
-<p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 
-<h1 class="membert">Members</h1>
+    <h1 class="membert">Members</h1>
 
-<table>
+      <table>
 
-  <tbody>
-    <% @members.each do |member| %>
-      <ul class="prof">
-        <li class="pageItems"></li>
-        <span id="pics" class="pageItems"><%= image_tag member.photo.url(:thumb) %></span>
-        <li class="pageItems"><%= member.name %></li>
-        <li class="pageItems"><%= member.title %></li>
-        <li class="pageItems"><%= member.email %></li>
-        <li class="pageItems"><%= member.company.name if member.company %></li>
-        <li>
-          <ul class="buttonholder">
-            <li id="editor" class="pagebuts"><%= link_to 'Edit', edit_member_path(member) %></li>
-            <li id="editor" class="pagebuts"><%= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-          </ul>
-        </li>
-      </ul>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% @members.each do |member| %>
+            <ul class="prof">
+              <li class="pageItems"></li>
+              <span id="pics" class="pageItems"><%= image_tag member.photo.url(:thumb) %></span>
+              <li class="pageItems"><%= member.name %></li>
+              <li class="pageItems"><%= member.title %></li>
+              <li class="pageItems"><%= member.email %></li>
+              <li class="pageItems"><%= member.company.name if member.company %></li>
+              <li>
+                <ul class="buttonholder">
+                  <li id="editor" class="pagebuts"><%= link_to 'Edit', edit_member_path(member) %></li>
+                  <li id="editor" class="pagebuts"><%= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+                </ul>
+              </li>
+            </ul>
+          <% end %>
+        </tbody>
+      </table>
 
 <br>
 

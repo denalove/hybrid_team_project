@@ -14,9 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function () {
+var ready = function () {
 $('#vid').fadeIn(1000).removeClass('hidden');
 $('.hiddent').fadeIn(2000).removeClass('hiddent');
 $('.buttonz').fadeIn(4000).removeClass('gone');
-});
+};
+
+$(ready);
+$(document).on('page:load', ready);

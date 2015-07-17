@@ -16,6 +16,11 @@ font-family: 'Lato', sans-serif;
   color: white;
 
 }
+
+img{
+  height: 20vw;
+}
+
 .prof{
   display: inline-block;
   border: 2px black inset;
