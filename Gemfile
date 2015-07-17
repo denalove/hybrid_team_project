@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 
 gem 'paperclip', "~> 4.3"
+
+gem 'aws-sdk'
+
 # Use sqlite3 as the database for Active Record
 group :development do
 	gem 'sqlite3'
