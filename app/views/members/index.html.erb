@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Photo</th>
       <th>Name</th>
       <th>Title</th>
       <th>Email</th>
@@ -16,14 +17,15 @@
   <tbody>
     <% @members.each do |member| %>
       <tr>
+        <td><%= image_tag member.photo.url(:thumb) %></td>
         <td><%= member.name %></td>
         <td><%= member.title %></td>
         <td><%= member.email %></td>
         <td><%= member.company.name if member.company %></td>
         
-        <td><%= link_to 'Show', member %></td>
+        <td><%= link_to 'Select', member %></td>
         <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
