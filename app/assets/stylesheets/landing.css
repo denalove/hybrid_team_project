@@ -19,7 +19,7 @@ font-family: 'Lato', sans-serif;
 }
 #vid{
   min-width: 100%;
-  min height: 100%;
+  min-height: 100%;
   z-index: -1;
   opacity: .4;
   width:auto;
