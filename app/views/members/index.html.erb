@@ -1,36 +1,51 @@
+<div class="container">
+<header>
+  <header class="menuBar">
+    <div class="menublock">
+      <ul class="navmenu">
+        <li class="menuitems"><a href="#" class="menubuttons">SEARCH</a></li>
+        <li class="menuitems"><a href="#" class="menubuttons">GALLERY</a></li>
+        <li class="menuitems"><a href="#" class="menubuttons">ABOUT US</a></li>
+      </ul>
+      <!-- <div class="socialbar">
+      </div> -->
+    </div>
+  </header>
+</header>
+<div class="banner">
+  <h1>banner goes here<h1>
+  </div>
+  <div class="content">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Members</h1>
+<h1 class="membert">Members</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Photo</th>
-      <th>Name</th>
-      <th>Title</th>
-      <th>Email</th>
-      <th>Company</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
   <tbody>
     <% @members.each do |member| %>
-      <tr>
-        <td><%= image_tag member.photo.url(:thumb) %></td>
-        <td><%= member.name %></td>
-        <td><%= member.title %></td>
-        <td><%= member.email %></td>
-        <td><%= member.company.name if member.company %></td>
-        
-        <td><%= link_to 'Select', member %></td>
-        <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <ul class="prof">
+        <li class="pageItems"></li>
+        <span id="pics" class="pageItems"><%= image_tag member.photo.url(:thumb) %></span>
+        <li class="pageItems"><%= member.name %></li>
+        <li class="pageItems"><%= member.title %></li>
+        <li class="pageItems"><%= member.email %></li>
+        <li class="pageItems"><%= member.company.name if member.company %></li>
+        <li>
+          <ul class="buttonholder">
+            <li id="editor" class="pagebuts"><%= link_to 'Edit', edit_member_path(member) %></li>
+            <li id="editor" class="pagebuts"><%= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          </ul>
+        </li>
+      </ul>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Member', new_member_path %>
+<a class="addnew"<%= link_to 'Add Member', new_member_path %></a>
+
+</div>
+</div>

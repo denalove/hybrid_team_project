@@ -31,10 +31,10 @@ font-family: 'Lato', sans-serif;
         /*Main Text*/
 #tittle{
   color: white;
-  font-family: 'Lato', sans-serif;
+  font-family: "COCOMAT", cursive, serif;
   font-size: 9vw;
   position: absolute;
-  top: 20vw; left:16%;
+  top: 20vw; left:32%;
   /*text-align: center;*/
   opacity: 1;
   z-index: 2;
@@ -90,7 +90,7 @@ font-family: 'Lato', sans-serif;
 }
 
 /*Start out as hidden, used with Jquery to show*/
-.hidden{
+.hiddenz{
       display: none;    /*Video*/
 }
 
