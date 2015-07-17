@@ -80,7 +80,7 @@ body, h1 {
   font-family: 'Roboto Condensed', sans-serif;
   letter-spacing: 2px;
   margin-top: -1.9vw;
-  margin-left: .5
+  margin-left: 0;
 }
 
 
@@ -89,7 +89,7 @@ body, h1 {
     width:60%;
 position: relative;
 margin-left: 20%;
-padding-top: 5vw;
+padding-top: 1vw;
 }
 
 .menubuttons{
@@ -102,6 +102,7 @@ padding-top: 5vw;
 	opacity: 1;
 	width: 100px;
 	letter-spacing: 2px;
+  margin-right: 2vw;
 }
 
 .menubuttons:hover{
@@ -190,7 +191,7 @@ padding-top: 5vw;
   border-bottom: 5px solid rgba(255, 255, 255, .15);
 }
 .zoom-container:hover img {
-  -webkit-transform:scale(1.25)
+  -webkit-transform:scale(1.25);
   -moz-transform:scale(1.25); /* Firefox */
         -ms-transform:scale(1.25); /* IE 9 */
         -o-transform:scale(1.25); /* Opera */
@@ -205,11 +206,24 @@ padding-top: 5vw;
     width: 50%;
   }
 }
+li.pageItems{
+  font-size: 2vw;
+}
 
+#memtit{
+  padding-top: 2vw;
+  font-family: 'Lato', sans-serif;
+  font-size: 3vw;
+
+}
 @media (max-width: 480px) {
   .zoom-container {
     width: 100%;
   }
+}
+
+.membert {
+  margin-bottom: 2vw;
 }
 
 .hvr-grow {
