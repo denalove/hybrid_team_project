@@ -1,40 +1,65 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,900|Raleway:400,800,600,200|Montserrat:400,700);
 
-/*font-family: 'Montserrat', sans-serif;
+/*-----------FONT LIST--------------
+font-family: 'Montserrat', sans-serif;
 font-family: 'Raleway', sans-serif;
-font-family: 'Lato', sans-serif;*/
+font-family: 'Lato', sans-serif;
+----------------------------------*/
 
 
+.body  {
+  background-color: black;
+  margin:0;
+}
+/* Video Background*/
 .background {
   min-width: 100%;
   min-height: 100%;
   background-color: black;
 }
+#vid{
+  min-width: 100%;
+  min height: 100%;
+  z-index: -1;
+  opacity: .4;
+  width:auto;
+  height: auto;
 
+}
+/*--------------------------------------*/
+
+        /*Main Text*/
+#tittle{
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 9vw;
+  position: absolute;
+  top: 20vw; left:16%;
+  /*text-align: center;*/
+  opacity: 1;
+  z-index: 2;
+  text-shadow: #404850 -2px 2px 1px;
+  font-weight: 250;
+/*#3EC79F*/
+}
+
+/*---------------------------------*/
+        /*Buttons*/
 .landingbutton {
   font-size: 3vw;
   opacity: 1;
   z-index: 2;
   color: white;
   color: white solid 5px;
-  width: 50px;
-  height: 50px;
   font-family: "COCOMAT", cursive, serif;
-  /*background-color: #3EC79F;*/
+
   text-decoration: none;
-
+  text-shadow: #404850  -2px 2px 2px;
+  opacity: .9;
+  border: solid white 2px;
+  border-radius: 10px;
+  box-shadow: black 3px 4px 5px;
 }
-#lpeople{
-  /*position: absolute;
-  top: 40vw;
-  margin-left: 30vw;*/
-  display: inline;
-    width: 30%;
-    margin-right: 20%;
-    background-color: white;
-    margin-left: 30%;
-}
-
 
 .buttonz{
   width: 100%;
@@ -44,42 +69,87 @@ font-family: 'Lato', sans-serif;*/
   top: 40vw;
   height: 5vw;
   vertical-align: baseline;
+  z-index: 2;
+
 }
+
+#lpeople{
+  display: inline;
+    width: 30%;
+    margin-right: 8%;
+    margin-left: 23%;
+    padding: .5vw 6vw .5vw 6vw;
+
+}
+
 #lcompany{
-  /*position: absolute;
-  top: 40vw;
-  margin-left: 55vw;*/
   width: 30%;
   display: inline;
   margin-right: 20%;
+  padding: .5vw 3vw .5vw 3vw;
+}
+
+/*Start out as hidden, used with Jquery to show*/
+.hidden{
+      display: none;    /*Video*/
 }
 
 
-#tittle{
-  color: white;
-  font-family: 'Lato', sans-serif;
-  font-size: 7vw;
+
+.hiddent{
+  display: none;        /*Title*/
+}
+.gone{
+  display: none;        /*buttons*/
+
+}
+
+/*-----------------------------------*/
+
+/* Bounce To Top Hover*/
+.hvr-bounce-to-top {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-to-top:before {
+  content: "";
   position: absolute;
-  top: 25vw; left:25%;
-  /*text-align: center;*/
-  opacity: 1;
-  z-index: 2;
-  text-shadow: black -2px 2px 0px;
-  font-weight: 250;
-/*#3EC79F*/
-}
-
-#vid{
-  min-width: 100%;
-  min-height: 100%;
   z-index: -1;
-  opacity: .3;
-  width:auto;
-  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #3EC79F;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
-
-
-.body  {
-
-  background-color: black;
+.hvr-bounce-to-top:hover, .hvr-bounce-to-top:focus, .hvr-bounce-to-top:active {
+  color: white;
+  text-shadow:  black -2px 2px 2px;
+  box-shadow: black -4px 4px 1px
+}
+.hvr-bounce-to-top:hover:before, .hvr-bounce-to-top:focus:before, .hvr-bounce-to-top:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
