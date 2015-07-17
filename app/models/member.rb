@@ -14,17 +14,17 @@ class Member < ActiveRecord::Base
 
 
   	:styles => {
-   	 	:admin    => ['100x100#',  :jpg, :quality => 70],
-    	:thumb    => ['250x250#',  :jpg, :quality => 70],
+   	 	:small    => ['150x150#',  :jpg, :quality => 70],
+      :medium    => ['300x300#',  :jpg, :quality => 70],
+    	:thumb    => ['100x100#',  :jpg, :quality => 70],
     	:preview  => ['500x500#',  :jpg, :quality => 70],
-   	 	:retina   => ['1200>',     :jpg, :quality => 30]
   	},
 
   	:convert_options => {
-    	:admin    => '-set colorspace sRGB -strip',
+    	:small    => '-set colorspace sRGB -strip',
+      :medium    => '-set colorspace sRGB -strip',
     	:thumb    => '-set colorspace sRGB -strip',
     	:preview  => '-set colorspace sRGB -strip',
-    	:retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
   	}
 
   validates_attachment_content_type :photo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]

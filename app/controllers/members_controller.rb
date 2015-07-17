@@ -19,12 +19,22 @@ class MembersController < ApplicationController
 
   # GET /members/1/edit
   def edit
+     # company = Company.find_by(name: param[:member]) || Company.create(name: params[:member][:company])
+
+     # @member.company_id = company.id
+
   end
 
   # POST /members
   # POST /members.json
   def create
+    # Company.find_by(name: member_params.company ) || Company.create(name: params[:member][:company])
     @member = Member.new(member_params)
+
+    company = Company.find_by(name: params[:member][:company]) || Company.create(name: params[:member][:company])
+    # find_or_create_by
+
+    @member.company_id = company.id
 
     respond_to do |format|
       if @member.save
@@ -40,6 +50,10 @@ class MembersController < ApplicationController
   # PATCH/PUT /members/1
   # PATCH/PUT /members/1.json
   def update
+
+    company = Company.find_by(name: params[:member][:company]) || Company.create(name: params[:member][:company])
+    @member.company_id = company.id
+
     respond_to do |format|
       if @member.update(member_params)
         format.html { redirect_to @member, notice: 'Member was successfully updated.' }
@@ -69,6 +83,6 @@ class MembersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def member_params
-      params.require(:member).permit(:name, :title, :email)
+      params.require(:member).permit(:name, :title, :email, :photo)
     end
 end
