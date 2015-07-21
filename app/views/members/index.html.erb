@@ -35,7 +35,7 @@ and more…</p>
           <% @members.each do |member| %>
             <ul class="prof">
               <li class="pageItems"></li>
-              <span id="pics" class="pageItems"><%= image_tag member.photo.url(:thumb) %></span>
+              <span id="pics" class="pageItems"><%= image_tag member.photo.url(:medium) %></span>
               <li class="pageItemsName"><%= member.name %></li>
               <li class="pageItems"><%= member.title %></li>
               <li class="pageItems"><%= member.email %></li>
