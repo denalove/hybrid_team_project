@@ -1,5 +1,10 @@
 class Member < ActiveRecord::Base
-	belongs_to :company
+	validates_presence_of :name, :email, :photo
+  belongs_to :company
+  validates :email, uniqueness: true, format: { with: /regex/i }
+  validates_length_of :name, minimum: 3
+
+
 	# has_attached_file :photo, styles: { medium: "300x300>", small: "150x150>", thumb: "100x100>" }
 	
 	# validates_attachment_content_type :photo, content_type: /\Aimage\/.*\Z/

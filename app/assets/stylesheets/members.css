@@ -27,7 +27,7 @@ font-family: 'Lato', sans-serif;
 
 img{
   height: 20vw;
-  border-radius: 125px;
+  border-radius: 125vw;
 }
 
 .prof{
@@ -36,7 +36,7 @@ img{
   width: 300px;
   height: auto;
   font-family: 'Lato', sans-serif;
-  margin-bottom: 5em;
+  margin-bottom: 5vw;
   /*background-color: #2f2f2f;*/
 }
 
