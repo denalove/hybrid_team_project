@@ -37,6 +37,8 @@ img{
   height: auto;
   font-family: 'Lato', sans-serif;
   margin-bottom: 5vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
   /*background-color: #2f2f2f;*/
 }
 
